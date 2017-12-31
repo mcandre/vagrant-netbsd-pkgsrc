@@ -17,13 +17,19 @@ user	0m1.926s
 sys	0m1.104s
 ```
 
-# REQUIREMENTS
+# RUNTIME REQUIREMENTS
 
 * [Vagrant](https://www.vagrantup.com)
-* A VM provider, such as [VirtualBox](https://www.virtualbox.org), [VMware](https://www.vmware.com), or [libvirt](https://libvirt.org)
+* The [VirtualBox](https://www.virtualbox.org) hypervisor provider
+
+# BUILDTIME REQUIREMENTS
+
+* [Vagrant](https://www.vagrantup.com)
+* The [VirtualBox](https://www.virtualbox.org) hypervisor provider
+* [make](https://www.gnu.org/software/make/)
 
 # EXPORT
 
 ```console
-$ vagrant destroy -f; vagrant up && vagrant package --output vagrant-netbsd-pkgsrc.box
+$ make vagrant-netbsd-pkgsrc.box
 ```

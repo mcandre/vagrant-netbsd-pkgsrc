@@ -7,6 +7,7 @@ https://app.vagrantup.com/mcandre/boxes/vagrant-netbsd-pkgsrc
 # EXAMPLE
 
 ```console
+$ cd test
 $ vagrant up
 $ time vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && sudo make install' && wget --version"
 ...

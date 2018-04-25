@@ -2,12 +2,13 @@
 
 # VAGRANT CLOUD
 
-https://app.vagrantup.com/mcandre/boxes/vagrant-netbsd-pkgsrc
+* https://app.vagrantup.com/mcandre/boxes/vagrant-netbsd-pkgsrc-amd64
+* https://app.vagrantup.com/mcandre/boxes/vagrant-netbsd-pkgsrc-i386
 
 # EXAMPLE
 
 ```console
-$ cd test
+$ cd amd64/test
 $ vagrant up
 $ time vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && sudo make install' && wget --version"
 ...
@@ -36,5 +37,6 @@ sys	0m1.104s
 # EXPORT
 
 ```console
-$ make vagrant-netbsd-pkgsrc.box
+$ sh -c "cd amd64 && make vagrant-netbsd-pkgsrc-amd64.box"
+$ sh -c "cd i386 && make vagrant-netbsd-pkgsrc-i386.box"
 ```

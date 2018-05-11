@@ -8,7 +8,7 @@ test-boot:
 	vagrant up
 
 test-install: test-boot
-	vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && sudo make install' && wget --version"
+	vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && make install' && wget --version"
 
 clean-vm:
 	-vagrant destroy -f

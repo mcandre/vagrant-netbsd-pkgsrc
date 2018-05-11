@@ -10,7 +10,7 @@
 ```console
 $ cd amd64/test
 $ vagrant up
-$ time vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && sudo make install' && wget --version"
+$ time vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && make install' && wget --version"
 ...
 GNU Wget 1.19.2 built on netbsd.
 ...

@@ -8,7 +8,7 @@ test-boot:
 	vagrant up
 
 test-install: test-boot
-	vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && make install' && wget --version"
+	vagrant ssh -c "su root -c 'cd /usr/pkgsrc && cvs update -dP && cd /usr/pkgsrc/net/wget && make install clean clean-depends PKG_OPTIONS.python27=-x11' && wget --version"
 
 clean-vm:
 	-vagrant destroy -f

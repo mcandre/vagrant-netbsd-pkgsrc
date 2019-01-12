@@ -10,7 +10,7 @@
 ```console
 $ cd amd64/test
 $ vagrant up
-$ time vagrant ssh -c "su root -c 'cd /usr/pkgsrc/net/wget && make install' && wget --version"
+$ time vagrant ssh -c "su root -c 'cd /usr/pkgsrc && cvs update -dP && cd /usr/pkgsrc/net/wget && make install clean clean-depends PKG_OPTIONS.python27=-x11' && wget --version"
 ...
 GNU Wget 1.19.2 built on netbsd.
 ...

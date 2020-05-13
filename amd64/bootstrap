@@ -1,6 +1,6 @@
 #!/bin/sh
 unset IFS
-set -eu
+set -euf
 
 ftp ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz &&
     su root -c 'tar -xzf pkgsrc.tar.gz -C /usr' &&
